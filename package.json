@@ -6,17 +6,44 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "npm run lint:script && npm run lint:style",
+    "lint:script": "next lint --dir src --fix",
+    "lint:style": "stylelint  --allow-empty-input ./**/*.{css,scss} --fix",
+    "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,scss,md,mdx}'",
+    "prepare": "husky install",
+    "hide": "git secret hide -m",
+    "reveal": "git secret reveal -f"
   },
   "dependencies": {
+    "@emotion/react": "^11.10.6",
+    "@emotion/server": "^11.10.0",
+    "@mantine/core": "^6.0.5",
+    "@mantine/dates": "^6.0.5",
+    "@mantine/form": "^6.0.5",
+    "@mantine/hooks": "^6.0.5",
+    "@mantine/next": "^6.0.5",
+    "dayjs": "^1.11.7",
+    "next": "13.2.4",
+    "next-superjson": "^0.0.4",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  },
+  "devDependencies": {
     "@types/node": "18.15.11",
     "@types/react": "18.0.31",
     "@types/react-dom": "18.0.11",
+    "@typescript-eslint/eslint-plugin": "^5.57.0",
     "eslint": "8.37.0",
     "eslint-config-next": "13.2.4",
-    "next": "13.2.4",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-unused-imports": "^2.0.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.0",
+    "prettier": "^2.8.7",
+    "stylelint": "^15.3.0",
+    "stylelint-config-recess-order": "^4.0.0",
+    "stylelint-config-recommended-scss": "^9.0.1",
     "typescript": "5.0.2"
   }
 }

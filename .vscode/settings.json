@@ -1,0 +1,23 @@
+{
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.codeActionsOnSave": {
+    "source.addMissingImports": true,
+    "source.fixAll.eslint": true
+  },
+  "css.validate": false,
+  "scss.validate": false,
+  "files.insertFinalNewline": true,
+  "cSpell.words": [
+    "nextjs",
+    "Tatsuro",
+    "Yokoyama",
+    "stylelint",
+    "Vercel",
+    "mantine",
+    "superjson",
+    "ponv"
+  ],
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "typescript.enablePromptUseWorkspaceTsdk": true
+}
